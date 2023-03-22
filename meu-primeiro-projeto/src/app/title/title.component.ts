@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
      
 @Component({
  selector: 'app-title',
@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
  styleUrls: ['./title.component.css'],
 })
  
-export class TitleComponent implements OnInit {
+export class TitleComponent implements OnInit, OnChanges {
 
-  public title:string = "Bem-vindo!"
+  @Input() public title:string = "Bem-vindo!"
   constructor() {}
-  ngOnInit() {
-    
-   
+  ngOnInit() { }
+
+  ngOnChanges(): void {
+    alert("Foi alterado com sucesso")
   }
 }
