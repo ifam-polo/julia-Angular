@@ -3,41 +3,24 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
 @Component({
   selector: 'app-root',
   template: `
-    {{ valor }}
-    <button (click)="adicionar()">Adicionar</button>
+  /* ngIf: serve para remover o componente da tela. Seu valor é setado como true e para desaparecer deve ser setado como false*/
+    <app-title *ngIf="destruir"></app-title>
+    <br>
+    <button (click)="destruirComponent()">Destruir componente</button>
     <router-outlet></router-outlet>
   `
 })
-export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+export class AppComponent implements OnInit {
   
-  public valor: number = 1;
+  public destruir: boolean = true
   
   constructor() {}
 
-  public adicionar(): number{
-    return this.valor += 1;
-  }
-
   ngOnInit(): void {}
 
-  ngDoCheck(): void {
-    console.log("DoCheck")
+  public destruirComponent(){
+    this.destruir = false;
+    console.log("botão de destruir clicado")
   }
 
-  ngAfterContentInit(): void {
-    console.log("AfterContentInit")
-  }
-  
-  ngAfterContentChecked(): void {
-    console.log("AfterContentChecked")
-  }
-
-  ngAfterViewInit(): void {
-    console.log("AfterViewInit")
-  }
-
-  ngAfterViewChecked(): void {
-    console.log("AfterViewChecked")
-  }
-  
 }
