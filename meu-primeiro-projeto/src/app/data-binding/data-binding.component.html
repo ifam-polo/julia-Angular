@@ -5,3 +5,38 @@
 <p>{{nome}} tem mais de 19 anos?</p>
 <p>{{idade > 19 }}</p>
 <p>A idade de {{ nome }} somada com 2 é: {{idade + maisDois}}</p>
+
+<hr>
+
+<h2>Propety Binding</h2>
+<button [disabled]="checkedDisabled">Button</button>
+
+<img [src]="imgSrc" [title]="imgTitle" [alt]="imgTitle">
+
+<br>
+<br>
+
+<h2>Event Binding</h2>
+
+<button (click)="alertaInfo($event)">Evento</button>
+
+<div (mousemove)="mouseMoveTeste($event)" style="background: rgb(255, 166, 0); width: 300px; height: 300px">
+    <p>Angular</p>
+</div>
+
+{{ position.x }} - {{position.y}}
+
+<br>
+<br>
+
+<hr>
+
+<h2>Two-way binding</h2>
+
+<input [(ngModel)]="nome">
+<!--{{nome}}-->
+
+<br>
+<br>
+
+<hr>
