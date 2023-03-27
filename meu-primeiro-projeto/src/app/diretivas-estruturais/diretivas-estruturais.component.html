@@ -24,3 +24,23 @@
 </ul>
 
 <button (click)="onClickAddList()">Adc</button>
+
+<hr>
+
+<input type="text" [(ngModel)]="nome">
+
+<div [ngSwitch]="nome">
+    <p *ngSwitchCase="'dener'">
+        Dener
+    </p>
+
+    <p *ngSwitchCase="'nay'">
+        Nay
+    </p>
+
+    <p *ngSwitchDefault>
+        Não existe sua busca
+    </p>
+
+
+</div>

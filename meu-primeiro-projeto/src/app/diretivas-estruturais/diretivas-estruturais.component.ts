@@ -14,6 +14,8 @@ export class DiretivasEstruturaisComponent implements OnInit{
     {nome: "Julia Donadelli Giroldo", idade: 20},
     {nome: "Julio", idade: 21}];
 
+  public nome: string = 'dener';
+
   constructor() {}
 
   ngOnInit(): void {

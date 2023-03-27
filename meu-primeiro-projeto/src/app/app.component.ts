@@ -3,7 +3,9 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
 @Component({
   selector: 'app-root',
   template: `
-    <app-diretivas-estruturais></app-diretivas-estruturais>
+  <!--
+    <app-diretivas-estruturais></app-diretivas-estruturais>-->
+    <app-diretivas-atributos></app-diretivas-atributos>
     <router-outlet></router-outlet>
   `
 })
