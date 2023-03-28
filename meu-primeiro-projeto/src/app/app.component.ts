@@ -9,7 +9,7 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
     <h1>Aula de diretivas de atributo</h1>
     <hr>
     </app-diretivas-atributos>-->
-    <app-diretivas-atributos></app-diretivas-atributos>
+    <app-new-component></app-new-component>
     <router-outlet></router-outlet>
   `
 })
