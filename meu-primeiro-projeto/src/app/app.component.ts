@@ -4,7 +4,11 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
   selector: 'app-root',
   template: `
   <!--
-    <app-diretivas-estruturais></app-diretivas-estruturais>-->
+    <app-diretivas-estruturais></app-diretivas-estruturais>
+    <app-diretivas-atributos>
+    <h1>Aula de diretivas de atributo</h1>
+    <hr>
+    </app-diretivas-atributos>-->
     <app-diretivas-atributos></app-diretivas-atributos>
     <router-outlet></router-outlet>
   `

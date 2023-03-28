@@ -12,7 +12,9 @@ export class DiretivasAtributosComponent {
   public backgroundColor: string = "yellow"
 
   public nome: string = "";
-  public list: Array<{nome: string}> = []
+  public list: Array<{nome: string}> = [{nome: "Julia"}]
+
+  public date: Date = new Date();
 
   constructor(){}
   
