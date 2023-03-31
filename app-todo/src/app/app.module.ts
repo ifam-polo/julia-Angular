@@ -16,13 +16,13 @@ import { HomeModule } from './modules/home/home.module';
   declarations: [
     AppComponent,
     //ComponentsComponent,
-    HomeModule
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    //HeaderComponent,
+    
 
   ],
   providers: [],
