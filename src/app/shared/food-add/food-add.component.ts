@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+//services
+import { FoodListService } from 'src/app/services/food-list.service';
 
 @Component({
   selector: 'app-food-add',
@@ -6,11 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./food-add.component.css']
 })
 export class FoodAddComponent {
-  constructor(){
+  constructor(private foodListService: FoodListService){
   }
 
   public listAddItem(value: string){
-    console.log(value)
+    return this.foodListService.foodListAdd(value);
   }
 }
 
