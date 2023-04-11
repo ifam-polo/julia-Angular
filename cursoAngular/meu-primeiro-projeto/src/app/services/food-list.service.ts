@@ -1,4 +1,7 @@
- import { EventEmitter, Injectable } from '@angular/core';
+ import { HttpClient } from '@angular/common/http';
+import { EventEmitter, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { FoodList } from '../module/food-list';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +17,7 @@ export class FoodListService {
   ];
 
   private url: string = "http://localhost:3000/"; // list-food
+  
   constructor(private http: HttpClient ) { }
 
 /*retorna o vetor list
@@ -21,8 +25,14 @@ export class FoodListService {
     return this.list;
   }*/
 
-  public foodList(){
-    return this.http.get(this.url + "list-food") 
+  public foodList(): Observable<FoodList> {
+    return this.http.get<FoodList>(`${this.url}list-food`)
+                    .pipe(
+                      res => res,
+                      error => error
+                      
+                      
+                    )
   }
 
 // adiciona itens ao vetor
