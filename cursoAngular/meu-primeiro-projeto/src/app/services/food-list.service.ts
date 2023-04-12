@@ -16,24 +16,17 @@ export class FoodListService {
     "Ovo"
   ];
 
-  private url: string = "http://localhost:3000/"; // list-food
+  private url: string = "http://localhost:4200/"; // list-food
   
   constructor(private http: HttpClient ) { }
 
-/*retorna o vetor list
-  public foodList(){
-    return this.list;
-  }*/
-
   public foodList(): Observable<FoodList> {
-    return this.http.get<FoodList>(`${this.url}list-food`)
-                    .pipe(
-                      res => res,
-                      error => error
-                      
-                      
-                    )
+    return this.http.get<FoodList>(`${this.url}list-food`).pipe(
+      res => res,
+      error => error
+    );
   }
+
 
 // adiciona itens ao vetor
   public foodListAdd(value: string){
