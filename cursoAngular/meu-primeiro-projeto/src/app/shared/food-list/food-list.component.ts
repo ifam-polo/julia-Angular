@@ -13,7 +13,7 @@ export class FoodListComponent implements OnInit {
 
   public foodList: FoodList | any;
 
-  constructor(private foodListService: FoodListService){}
+  constructor(private foodListService: FoodListService)  {}
 
   ngOnInit():void {
     this.foodListService.foodList().subscribe({

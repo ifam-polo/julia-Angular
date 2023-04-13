@@ -3,25 +3,6 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
 @Component({
   selector: 'app-root',
   template: `
-  <!--
-    <app-diretivas-estruturais></app-diretivas-estruturais>
-    <app-diretivas-atributos>
-    <h1>Aula de diretivas de atributo</h1>
-    <hr>
-    </app-diretivas-atributos>-->
-
-    <!--<app-input [contador]="addValue"></app-input>
-    <br>
-    <button (click)="add()">Add</button>
-    <button (click)="subtrair()">Subtrair</button>
-
-    <ng-template [ngIf]="getDados">
-      <h1>{{getDa
-        dos.nome}}</h1>
-      <h2>{{getDados.idade}}</h2>
-    </ng-template>
-
-    <app-output (enviarDados)="setDados($event)"></app-output>-->
     <app-food-add></app-food-add>
     <app-food-list></app-food-list>
     <router-outlet></router-outlet>

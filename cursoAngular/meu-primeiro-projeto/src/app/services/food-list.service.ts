@@ -1,4 +1,4 @@
- import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FoodList } from '../module/food-list';
@@ -16,12 +16,12 @@ export class FoodListService {
     "Ovo"
   ];
 
-  private url: string = "http://localhost:4200/"; // list-food
+  private url: string = "http://localhost:3000/"; // list-food
   
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
   public foodList(): Observable<FoodList> {
-    return this.http.get<FoodList>(`${this.url}list-food`).pipe(
+    return this.http.get<FoodList>(`${this.url}foodlist`).pipe(
       res => res,
       error => error
     );
