@@ -11,18 +11,21 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodListComponent implements OnInit {
 
-  public foodList: FoodList | any;
+  public foodList: Array<FoodList> = [];
 
   constructor(private foodListService: FoodListService)  {}
 
   ngOnInit():void {
     this.foodListService.foodList().subscribe({
       next: (res) => this.foodList = res,
-      error: (e) => e,
+      error: (e) => console.log(e)
     });
 
     this.foodListService.emitEvent.subscribe({
-      next: (res: string) => alert(`Você adicionou => ${res}`)
-    });
+      next: (res: any) => {
+        alert(`Voce adcionou um item a lista: ${res.nome}`);
+        return this.foodList.push(res);
+      }
+      });
   }
 }
