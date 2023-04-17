@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter, Injectable } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core'
+
+//Interface module
 import { FoodList } from '../module/food-list';
 
 @Injectable({
@@ -29,16 +32,17 @@ export class FoodListService {
 
 
 // adiciona itens ao vetor
-  /*public foodListAdd(value: string){
+  public foodListAdd(value: string){
     this.foodListAlert(value);
     return this.list.push(value)
-  }*/
+  }
 
-  public foodListAdd(value: string):  Observable<FoodList>{
+  /*public foodListAdd(value: string):  Observable<FoodList> {
     return this.http.post<FoodList>(`${this.url}list-food`, { nome: value}).pipe(
       res => res,
-      error => error)
-  }
+      error => error
+      )
+  }*/
 
   public foodListAlert(value: string){
     return this.emitEvent.emit(value);

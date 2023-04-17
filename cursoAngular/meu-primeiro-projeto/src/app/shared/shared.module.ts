@@ -12,9 +12,20 @@ import { FoodAddComponent } from './food-add/food-add.component';
 
 
 @NgModule({
-  declarations: [NewComponentComponent, InputComponent, OutputComponent, FoodListComponent, FoodAddComponent],
+  declarations: [
+    NewComponentComponent, 
+    InputComponent, 
+    OutputComponent, 
+    FoodListComponent, 
+    FoodAddComponent,
+  ],
   exports:[
-    NewComponentComponent, InputComponent, OutputComponent, FoodListComponent,FoodAddComponent], 
+    NewComponentComponent, 
+    InputComponent, 
+    OutputComponent, 
+    FoodListComponent,
+    FoodAddComponent,
+  ], 
   imports: [
     CommonModule,
     HttpClientModule,
