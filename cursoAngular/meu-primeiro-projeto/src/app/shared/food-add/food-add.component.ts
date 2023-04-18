@@ -12,11 +12,10 @@ export class FoodAddComponent {
   }
 
   public listAddItem(value: string){
-    return this.foodListService.foodListAdd(value)
-    /*.subscribe({
+    return this.foodListService.foodListAdd(value).subscribe({
       next: (res) => this.foodListService.foodListAlert(res),
-      error: (e) => e
-    }*///);
+      error: (err) => console.log(err) 
+    })
   }
 }
 

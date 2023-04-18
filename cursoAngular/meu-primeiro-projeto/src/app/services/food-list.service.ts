@@ -31,20 +31,15 @@ export class FoodListService {
   }
 
 
-// adiciona itens ao vetor
-  public foodListAdd(value: string){
-    this.foodListAlert(value);
-    return this.list.push(value)
-  }
-
-  /*public foodListAdd(value: string):  Observable<FoodList> {
+// adiciona itens ao vetor da lista
+  public foodListAdd(value: string): Observable<FoodList>{
     return this.http.post<FoodList>(`${this.url}list-food`, { nome: value}).pipe(
       res => res,
       error => error
-      )
-  }*/
+    )
+  }
 
-  public foodListAlert(value: string){
+  public foodListAlert(value: FoodList){
     return this.emitEvent.emit(value);
   }
 }
