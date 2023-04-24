@@ -3,8 +3,10 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
 @Component({
   selector: 'app-root',
   template: `
-    <app-food-add></app-food-add>
-    <app-food-list></app-food-list>
+    <app-forms></app-forms>
+
+    <!--<app-food-add></app-food-add>
+    <app-food-list></app-food-list>-->
     <router-outlet></router-outlet>
   `
 })

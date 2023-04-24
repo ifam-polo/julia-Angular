@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
 import { SharedModule } from './shared/shared.module';
-import { FoodListService } from './services/food-list.service'
+import { FoodListService } from './services/food-list.service';
+import { FormsComponent } from './forms/forms.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FoodListService } from './services/food-list.service'
     TitleComponent,
     DataBindingComponent,
     DiretivasEstruturaisComponent,
-    DiretivasAtributosComponent
+    DiretivasAtributosComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
