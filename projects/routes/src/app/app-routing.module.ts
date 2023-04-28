@@ -11,13 +11,15 @@ const routes: Routes = [
   {path: "sobre", component: SobreComponent, children: [
     {path: "julia", component: SobreComponent},
   ]},
+  {path: 'dashboard', 
+  loadChildren: () => import('./dashboard/dashboard.module').then (m => m.DashboardModule)},
   {path: "404", component: PageErrorComponent},
   {path: "**",  redirectTo: '404' } // rota coringa- quando a rota n existe
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
