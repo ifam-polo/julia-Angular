@@ -13,6 +13,6 @@ export class PokeSearchComponent implements OnInit {
   ngOnInit():void {}
 
   public search(value: string){
-    this.emitSearch.emit(value)
+    this.emitSearch.emit(value);
   }
 }
