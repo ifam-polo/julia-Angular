@@ -11,6 +11,9 @@ export class PokeListComponent implements OnInit{
   public getAllPokemons: any;
   private setAllPokemons: any;
 
+  public apiError: boolean = false;
+
+
   constructor (
     private pokeApiService: PokeApiService
   ) { }
@@ -20,6 +23,9 @@ export class PokeListComponent implements OnInit{
       next: (res) => {
         this.setAllPokemons = res.results;
         this.getAllPokemons = this.setAllPokemons;
+      },
+      error: (erro) => {
+        this.apiError = true;
       }
     });
   }
