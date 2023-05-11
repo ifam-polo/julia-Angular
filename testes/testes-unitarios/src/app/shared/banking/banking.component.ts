@@ -17,10 +17,34 @@ export class BankingComponent {
   get getCarteira(): number{
     return this.carteira;
   }
-  public setDepositar(value: string): number{
-    const depositar = Number(value)
-    console.log(depositar)
 
+  public setSacar(value: string): number | undefined{
+    const sacar = Number(value);
+
+    if (isNaN(sacar) || this.poupanca < sacar){
+      return;
+
+    }
+
+    this.poupanca -= sacar;
+
+    console.log(this.carteira += sacar);
+
+    return sacar;
+  }
+
+  public setDepositar(value: string): number | undefined{
+    const depositar = Number(value);
+
+    if (isNaN(depositar) || this.carteira < depositar){
+      return;
+
+    }
+
+    this.carteira -= depositar;
+
+    console.log(this.poupanca += depositar);
+  
     return depositar;
   }
 }
