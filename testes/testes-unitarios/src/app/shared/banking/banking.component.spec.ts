@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ListComponent } from '../investiments/list/list.component';
 
 import { BankingComponent } from './banking.component';
 
@@ -8,7 +9,7 @@ describe('BankingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BankingComponent ]
+      declarations: [ BankingComponent, ListComponent ]
     })
     .compileComponents();
 
@@ -41,11 +42,24 @@ describe('BankingComponent', () => {
     expect(component.getCarteira).toBe(60);
   });
 
+  it(`(I) setSacar(): should transfer poupanca from carteira`, () => {
+    let el = fixture.debugElement.nativeElement;
+
+    el.querySelector('#input-sacar').value = "20";
+    el.querySelector('#sacar').click();
+    fixture.detectChanges();
+    
+    expect(el.querySelector('#get-carteira').textContent).toEqual('70');
+    expect(component.getSacar).toEqual(80);
+    expect(component.getCarteira).toEqual(70);
+    
+  });
+
   it(`(U) setSacar(): shoud transfer poupaca dont have string (isNaN)
   or poupaca < value
 `, () => {
   expect(component.setSacar('string')).not.toBeTruthy();
-  expect(component.setSacar('10')).not.toBeTruthy();
+  expect(component.setSacar('1000')).not.toBeTruthy();
 
   expect(component.getSacar).toEqual(100);
   expect(component.getCarteira).toEqual(50);
@@ -63,5 +77,18 @@ describe('BankingComponent', () => {
     expect(component.getSacar).toEqual(100);
     expect(component.getCarteira).toEqual(50);
   }); 
+
+  it(`(I) setDepositar(): should transfer carteira from poupanca`, () => {
+    let el = fixture.debugElement.nativeElement;
+
+    el.querySelector('#input-depositar').value = "20";
+    el.querySelector('#depositar').click();
+    fixture.detectChanges();
+    
+    expect(el.querySelector('#get-poupanca').textContent).toEqual('120');
+    expect(component.getSacar).toEqual(120);
+    expect(component.getCarteira).toEqual(30);
+    
+  });
 
 });
