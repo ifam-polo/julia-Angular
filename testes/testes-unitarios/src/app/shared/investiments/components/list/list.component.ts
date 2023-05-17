@@ -11,32 +11,14 @@ import { ListInvestimentsService } from '../../services/list-investiments.servic
 })
 export class ListComponent {
 
-  public investiments: Array<Investiments> = [
-    {
-      name: "itau",
-      value: 100
-    },
-    {
-      name: "c6",
-      value: 1000
-    },
-    {
-      name: "banco do brasil",
-      value: 200
-    },
-    {
-      name: "nubank",
-      value: 2000
-    },
-  ]
+  public investiments !: Array<Investiments>;
   constructor(
-    private listInvestimentsService:ListInvestimentsService
+    private listInvestimentsService: ListInvestimentsService
   ) { }
 
   ngOnInit(): void {
     this.listInvestimentsService.list().subscribe({
-      next: (res) => console.log(res),
-      error: (err) => console.log(err)
+      next: (res) =>(this.investiments = res)
     })
   }
 
