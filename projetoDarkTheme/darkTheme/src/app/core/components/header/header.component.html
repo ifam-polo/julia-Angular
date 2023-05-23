@@ -1,0 +1,17 @@
+<header>
+    <img src="./assets/Group.png" alt="logo angular">
+
+    <ul>
+        <li>
+            <a [routerLink]="['']">Home</a>
+        </li>
+        <li>
+            <a [routerLink]="['sobre']">sobre</a>
+        </li>
+        <li>
+            <button typer="button" (click)="toggle()">
+                <img src="./assets/{{ icon }}.png" alt="Modo noturno">
+            </button>
+        </li>
+    </ul>
+</header>
