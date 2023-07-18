@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 import { MatDialogRef,  MAT_DIALOG_DATA} from '@angular/material/dialog'
@@ -39,7 +39,7 @@ export class DialogComponent {
     }
   }
   addProduct(){
-    if(this.editData){
+    if(!this.editData){
       if(this.productForm.valid){
         this.api.postProduct(this.productForm.value).subscribe({
           next: (res)=>{
@@ -61,7 +61,7 @@ export class DialogComponent {
       next: (res)=> {
         alert('Produto atualizado com sucesso')
         this.productForm.reset();
-        this.dialogRef.close('Update')
+        this.dialogRef.close('update')
       },
       error :()=> {
         alert("Erro ao atualizar")
