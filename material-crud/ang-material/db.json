@@ -1,5 +1,15 @@
 {
-  "productsList": [],
+  "productsList": [
+    {
+      "productName": "a",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 10,
+      "comment": "1",
+      "date": "2023-07-18T04:00:00.000Z",
+      "id": 1
+    }
+  ],
   "comments": [
     {
       "id": 1,
