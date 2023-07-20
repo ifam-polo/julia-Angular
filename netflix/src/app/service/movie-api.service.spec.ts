@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GatoApiService } from './gato-api.service';
+import { MovieApiService } from './movie-api.service';
 
-describe('GatoApiService', () => {
-  let service: GatoApiService;
+describe('MovieApiService', () => {
+  let service: MovieApiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GatoApiService);
+    service = TestBed.inject(MovieApiService);
   });
 
   it('should be created', () => {
