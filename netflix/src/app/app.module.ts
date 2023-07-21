@@ -9,6 +9,8 @@ import { SearchComponent } from './pages/search/search.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { MovieApiService } from './service/movie-api.service';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { MovieApiService } from './service/movie-api.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [MovieApiService],
   bootstrap: [AppComponent]

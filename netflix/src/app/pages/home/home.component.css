@@ -23,19 +23,24 @@
     overflow-x: scroll;
 }
 
-.rowing{
+.rowimg{
     max-height: 200px;
     object-fit: contain;
     width: 100%;
     box-sizing: content-box;
     transition: transform 450ms;
+    margin-right: 7px;
 }
 
-.rowing:hover{
-    transform: scale(1.08);
+.rowimg:hover{
+    transform: scale(1.06);
     cursor: pointer;
 }
 
 .largeposter{
-    max-width: 600px;
+    max-height: 300px;
+}
+
+.rowposter::-webkit-scrollbar{
+    display: none;
 }
