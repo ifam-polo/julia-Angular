@@ -12,10 +12,24 @@ export class HomeComponent {
 
   bannerResult: any =[]
   trendingMovieResult:any = []
+  actionMovieResult: any = []
+  adventureMovieResult: any = []
+  animationMovieResult: any = []
+  comedyMovieResult: any = []
+  documentaryMovieResult: any = []
+  scienceFictionMovieResult: any = []
+  thriller:any = []
 
   ngOnInit(): void {
     this.bannerData();
-    this.trendingData()
+    this.trendingData();
+    this.actionMovie();
+    this.adventureMovie();
+    this.animationMovie();
+    this.comedyMovie();
+    this.scienceFictionMovie();
+    this.documentaryMovie();
+    this.thrillerMovie();
   }
 
 
@@ -34,4 +48,51 @@ export class HomeComponent {
     })
   }
 
+  actionMovie(){
+    this.movieApi.fetchActionMovies().subscribe((res)=>{
+      console.log(res, "filme de ação")
+
+      this.actionMovieResult = res.results;
+
+    })
+  }
+
+  adventureMovie(){
+    this.movieApi.fetchAdventureMovies().subscribe((res)=>{
+      console.log(res, "filme de aventura")
+      this.adventureMovieResult = res.results;
+    })
+  }
+  animationMovie(){
+    this.movieApi.fetchAnimationMovies().subscribe((res)=>{
+      console.log(res, "filme de animação")
+      this.animationMovieResult = res.results;
+    })
+  }
+
+  comedyMovie(){
+    this.movieApi.fetchComedyMovies().subscribe((res)=>{
+      console.log(res, "filme de comédia")
+      this.comedyMovieResult = res.results;
+    })
+  }
+
+  documentaryMovie(){
+    this.movieApi.fetchDocumentaryMovies().subscribe((res)=>{
+      console.log(res, "filme de documentario")
+      this.documentaryMovieResult = res.results;
+    })
+  }
+  scienceFictionMovie(){
+    this.movieApi.fetchScienceFictionMovies().subscribe((res)=>{
+      console.log(res, "filme de ficção científica")
+      this.scienceFictionMovieResult = res.results;
+    })
+  }
+  thrillerMovie(){
+    this.movieApi.fetchThrillerMovies().subscribe((res)=>{
+      console.log(res, "filme de terror") 
+      this.thriller = res.results;
+    })
+  }
 }
