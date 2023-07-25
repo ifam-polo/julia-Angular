@@ -1,0 +1,43 @@
+#contagem{
+    font-weight: bold;
+    width: 350px; 
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 45px;
+    margin: 20px auto;
+    text-align: center;
+    margin-top: 300px;
+    
+}
+h1{
+    text-align: center;
+}
+
+.botoes{
+    width: 500px; 
+    height: 200px;
+    margin: 50px 500px 100px 713px;
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 25px;
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 30px;
+    width: 130px;
+}
+
+#reset{
+    background-color: #E50914;
+    color: #fff;
+    margin-left: 10px;
+    
+}
+#adcDez{
+    margin-left: 10px;
+    background-color: #B0E0E6
+}
+
