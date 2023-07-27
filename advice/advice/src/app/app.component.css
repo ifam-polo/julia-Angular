@@ -1,0 +1,25 @@
+html, body {
+    height: 100hv;
+    margin: 0;
+    background-color: rgb(187, 137, 233);
+}
+
+.conteudo {
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    margin-top: 350px;
+}
+
+.btn {
+    width: 250px;
+    height: 30px;
+    background-color: rgb(87, 64, 214);
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
