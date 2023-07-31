@@ -1,21 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 html, body {
-    height: 100hv;
+    height: 100vh;
     margin: 0;
-    background-color: rgb(187, 137, 233);
+    overflow: auto;
+    background-color: #E6E6FA	;
 }
+
 
 .conteudo {
     width: 350px;
-    margin: auto;
+    font-family: 'Quicksand';
+    font-size: 24px;
     text-align: center;
     margin-top: 350px;
+    margin: 350px auto 350px auto;
 }
 
 .btn {
     width: 250px;
     height: 30px;
-    background-color: rgb(87, 64, 214);
+    background-color: #81a581;
     border: none;
+    font-family: 'Quicksand';
+    font-size: 16px;
 }
 
 .btn:hover {
